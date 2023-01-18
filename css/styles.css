@@ -13,6 +13,8 @@
     width: 60rem;
     margin: 0 auto;
     padding: 0 1rem;
+    background-color: greenyellow;
+    position: relative;
 }
 
 .point{
@@ -61,31 +63,87 @@ header nav{
     align-items: center;    
     display: flex;
     justify-content: space-between;  
-   
+    background-color: aqua;  
 }
 
-#logo{
-    width: 8rem;
-    height: 8rem;
-}
+/* #logo{
+    width: 6rem;
+    height: 6rem;
+} */
 
 header nav h1{    
-    font-size: 3rem;
-   
-    padding-left: 1rem;
+    font-size: 3rem;  
+    align-items: center;
+    background-color: #ff6659;
 }
 
-header nav ul{    
+.nav-links ul{    
     display: flex;
-    
+    background-color: aliceblue;    
+    justify-content: center;    
+}
+
+header nav ul li{
+    margin: 0 1rem;
+}
+
+header nav ul li.active a{
+    color: #ff6659;
+    font-weight: 900;
 }
 
 header nav a{
-    text-transform: uppercase;
-    margin-right: 1rem;  
+    text-transform: uppercase;      
     font-size: 1rem;  
-    font-weight: bold;
+    font-weight: 500;
 }
+
+header nav .hamb{
+    display: none;
+    font-size: 3.5rem;
+    position: absolute;
+    top: 0.02rem;
+    margin-left: 50rem;
+    
+}
+
+
+
+/* Création du media queries pour navbar responsive */
+
+@media screen and (max-width: 960px){
+    
+    header nav .hamb{
+        display: block;
+    }
+    
+    header nav .nav-links ul{
+        position: absolute;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        left: 0;    
+        background-color: rgba(0, 0, 0, 0.200); 
+        backdrop-filter: blur(3px);  
+        margin-left: 100%;
+        transition: all 0.5s ease;      
+    }  
+    
+    .nav-links.mobile-menu ul{
+        margin-left: 0;
+    } 
+
+    header nav ul li{
+        margin: 2rem 0;               
+    }
+
+    header nav ul li a{
+        font-size: 1.5rem;
+    }
+}
+    
 
 
 
