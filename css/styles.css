@@ -15,7 +15,9 @@
     padding: 0 1rem;
 }
 
-
+.point{
+    color: #d32f2f;
+}
 
 
 
@@ -50,12 +52,40 @@
 
 
 /*HEADER */
+header{
+    padding: 1rem;
+    
+}
 
+header nav{
+    align-items: center;    
+    display: flex;
+    justify-content: space-between;  
+   
+}
 
+#logo{
+    width: 8rem;
+    height: 8rem;
+}
 
+header nav h1{    
+    font-size: 3rem;
+   
+    padding-left: 1rem;
+}
 
+header nav ul{    
+    display: flex;
+    
+}
 
-
+header nav a{
+    text-transform: uppercase;
+    margin-right: 1rem;  
+    font-size: 1rem;  
+    font-weight: bold;
+}
 
 
 
