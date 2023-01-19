@@ -22,7 +22,12 @@
 
 
 
-
+.fdp{
+    margin: auto;
+    height: 0.2rem; 
+    width: 40rem;
+    background-image: -webkit-linear-gradient(left, rgba(255,215,0,0), #D32F2F, rgba(255,215,0,0)) ;
+}
 
 
 
@@ -50,10 +55,7 @@
 
 
 /*HEADER */
-header{
-    padding: 1rem;
-    
-}
+
 
 header nav{
     align-items: center;    
@@ -194,10 +196,11 @@ header nav .hamb{
 
 
 /* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+
+
+.slideshow-container img{
+  height: 30rem;
+  object-fit: cover ;
 }
 
 /* Hide the images by default */
