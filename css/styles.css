@@ -6,14 +6,16 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: 'baloo 2',Arial,sans-serif;
+    font-family: 'baloo 2',Arial,sans-serif;  
+
 }
 
 .wrapper{
     width: 60rem;
     margin: 0 auto;
-    padding: 0 1rem;
-    /*background-color: greenyellow;   */
+    padding: 0 0.5rem;
+    background-color: rgba(85, 47, 255, 0.479);
+    box-sizing: border-box;
 }
 
 .point{
@@ -27,7 +29,12 @@
     background-image: -webkit-linear-gradient(left, rgba(255,215,0,0), #d32f2f, rgba(255,215,0,0)) ;
 }
 
-
+h2{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;    
+    /* background-color: #d32fc2; */
+}
 
 
 
@@ -59,15 +66,16 @@
 header nav{
     align-items: center;    
     display: flex;
-    justify-content: space-between;       
+    justify-content: space-between;          
 }
 
-#logo{
+#logo{    
     width: 5rem;
     height: 5rem;
 } 
 
-header nav h1{    
+header nav h1{   
+    
     font-size: 3rem;  
     align-items: center;    
 }
@@ -81,10 +89,10 @@ header nav ul li{
     margin: 0 1rem;
 }
 
-/*header nav ul li.active a{
+header nav ul li.active a{
     color: #ff6659;
     font-weight: 900;
-}*/
+}
 
 header nav a{
     text-transform: uppercase;      
@@ -117,7 +125,7 @@ header nav .hamb{
 
 
 /* Création du media queries pour navbar responsive */
-
+/*test
 @media screen and (max-width: 960px){
     
     header nav .hamb{
@@ -153,7 +161,7 @@ header nav .hamb{
     
 
 
-
+*/
 
 
 
@@ -190,15 +198,18 @@ header nav .hamb{
 
 
 /*ACCUEIL*/
-
-
-
-#accueil h2{
-    font-size: 2rem;
-    text-align: center;
-    text-transform: uppercase;    
-    /*background-color: #d32fc2;*/
+/*   test responsive 
+@media screen and (max-width: 960px){
+    #accueil{
+        display: none;
+    }
 }
+*/
+
+
+
+
+
 
 
 
@@ -216,7 +227,7 @@ header nav .hamb{
   height: 30rem;
   object-fit: cover ;
   box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-  border-radius: 3rem;
+  border-radius: 1rem;
 }
 /* Hide the images by default */
 .mySlides {
@@ -345,30 +356,53 @@ header nav .hamb{
 
 /*DESTINATION */
 
-#destination article{
+
+
+
+div.gallery {
+    border-radius: 0.3rem;
+    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+    margin: 0.3rem; 
+  }
+  
+  div.gallery:hover {
+    box-shadow:4px 4px 5px #d32f2f;
+  }
+  
+  div.gallery img {
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    width: 100%;
+    height: 13rem;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
   
 
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 32%;
+  }
   
-}
+  @media only screen and (max-width: 960px) {
+    .responsive {
+    position:relative;
+    right: -25%;
+    width: 50%;   
+    height: 18rem;  
+    }
+    
+  } 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 
 
@@ -396,7 +430,12 @@ header nav .hamb{
 /*ACTIVITY*/
 
 
-
+#activités{   
+   
+    background-color: #d32f2f15;   
+    height: 30rem;
+    
+}
 
 
 
@@ -441,6 +480,11 @@ header nav .hamb{
 /*CONTACT*/
 
 
+#contact{    
+   
+    background-color: #d32f2f15;   
+    height: 30rem;
+}
 
 
 
@@ -483,14 +527,17 @@ header nav .hamb{
 
 
 
-
-/*FOOTER/*
-
+/*FOOTER*/
 
 
 
 
 
+footer{    
+    
+    background-color: #d32f2f15;   
+    height: 10rem;
+}
 
 
 

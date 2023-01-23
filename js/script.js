@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// js pour menu hamb , en test
 // ajout de la class .mobile-menu dans la class .nav-links lors d'un clic sur la class .hamb //
 
         const menuHamburger = document.querySelector(".hamb")
@@ -7,8 +23,7 @@
         navLinks.classList.toggle('mobile-menu')
         })
 
-
-        
+// fin js pour menu hamb   
 
 
 
@@ -32,7 +47,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
 }
 
 // fin script slide show w3c
