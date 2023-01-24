@@ -6,7 +6,8 @@
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: 'baloo 2',Arial,sans-serif;  
+    font-family: 'baloo 2',Arial,sans-serif; 
+    box-sizing: border-box; 
 
 }
 
@@ -14,8 +15,8 @@
     width: 60rem;
     margin: 0 auto;
     padding: 0 0.5rem;
-    background-color: rgba(85, 47, 255, 0.479);
-    box-sizing: border-box;
+    background-color: rgba(85, 47, 255, 0.13);
+    
 }
 
 .point{
@@ -124,44 +125,6 @@ header nav .hamb{
 
 
 
-/* Création du media queries pour navbar responsive */
-/*test
-@media screen and (max-width: 960px){
-    
-    header nav .hamb{
-        display: block;
-    }
-    
-    header nav .nav-links ul{
-        position: absolute;
-        flex-direction: column;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        top: 0;
-        left: 0;    
-        background-color: rgba(0, 0, 0, 0.200); 
-        backdrop-filter: blur(3px);  
-        margin-left: 100%;
-        transition: all 0.5s ease;      
-    }  
-    
-    .nav-links.mobile-menu ul{
-        margin-left: 0;
-    } 
-
-    header nav ul li{
-        margin: 2rem 0;               
-    }
-
-    header nav ul li a{
-        font-size: 1.5rem;
-    }
-}
-    
-
-
-*/
 
 
 
@@ -198,22 +161,12 @@ header nav .hamb{
 
 
 /*ACCUEIL*/
-/*   test responsive 
+ 
 @media screen and (max-width: 960px){
     #accueil{
         display: none;
     }
 }
-*/
-
-
-
-
-
-
-
-
-
 
 
 
@@ -225,9 +178,8 @@ header nav .hamb{
 
 .slideshow-container img{
   height: 30rem;
-  object-fit: cover ;
   box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-  border-radius: 1rem;
+  border-radius: 0.3rem;
 }
 /* Hide the images by default */
 .mySlides {
@@ -357,52 +309,104 @@ header nav .hamb{
 /*DESTINATION */
 
 
-
-
-div.gallery {
-    border-radius: 0.3rem;
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    margin-bottom: 1rem;
+    justify-content: space-around;
+    background-color: transparent;
+    width: 295px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 1rem;
     box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-    margin: 0.3rem; 
   }
   
-  div.gallery:hover {
-    box-shadow:4px 4px 5px #d32f2f;
-  }
-  
-  div.gallery img {
-    border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem;
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: absolute;
     width: 100%;
-    height: 13rem;
-  }
-  
-  div.desc {
-    padding: 15px;
+    height: 100%;
     text-align: center;
-  }
-  
-
-  .responsive {
-    padding: 0 6px;
-    float: left;
-    width: 32%;
-  }
-  
-  @media only screen and (max-width: 960px) {
-    .responsive {
-    position:relative;
-    right: -25%;
-    width: 50%;   
-    height: 18rem;  
-    }
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
     
-  } 
-
-  .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
   }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {    
+    background-color: #bbb;
+    color: black;
+    border-radius: 1rem;
+    overflow: hidden;    
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: 1rem;
+  }
+  
+
+#destinations{    
+    display: flex;   
+    justify-content: space-around;      
+}
+
+@media screen and (max-width: 960px){
+    #destinations{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: -35%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -430,24 +434,50 @@ div.gallery {
 /*ACTIVITY*/
 
 
-#activités{   
-   
-    background-color: #d32f2f15;   
-    height: 30rem;
-    
+
+
+
+
+
+
+
+
+
+
+
+
+div.gallery {
+    border-radius: 0.3rem;
+    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+    margin: 0.3rem; 
 }
+  
+div.gallery:hover {
+    box-shadow:4px 4px 5px 0 #d32f2f;   
+}
+  
+div.gallery img {
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    width: 100%;
+    height: 13rem;
+}
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+ }
+  
 
 
-
-
-
-
-
-
-
-
-
-
+  
+@media only screen and (max-width: 960px) {
+  .responsive {
+  position:relative;
+  right: -25%;
+  width: 50%;   
+  height: 18rem;}    
+} 
 
 
 
@@ -480,8 +510,7 @@ div.gallery {
 /*CONTACT*/
 
 
-#contact{    
-   
+#contact{      
     background-color: #d32f2f15;   
     height: 30rem;
 }
@@ -489,7 +518,65 @@ div.gallery {
 
 
 
-
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
 
 
 
