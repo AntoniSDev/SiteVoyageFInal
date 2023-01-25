@@ -1,39 +1,37 @@
 /* GENERAL */
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-    font-family: 'baloo 2',Arial,sans-serif; 
-    box-sizing: border-box; 
+    font-family: 'baloo 2', Arial, sans-serif;
+    box-sizing: border-box;
 
 }
 
-.wrapper{
+.wrapper {
     width: 60rem;
     margin: 0 auto;
-    padding: 0 0.5rem;
-    background-color: rgba(85, 47, 255, 0.13);
-    
+    padding: 0 0.5rem;   
 }
 
-.point{
+.point {
     color: #d32f2f;
 }
 
-.bar{
-    height: 0.2rem; 
+.bar {
+    height: 0.2rem;
     width: 40rem;
-    margin: 1rem auto;
-    background-image: -webkit-linear-gradient(left, rgba(255,215,0,0), #d32f2f, rgba(255,215,0,0)) ;
+    margin: 2rem auto;
+    background-image: -webkit-linear-gradient(left, rgba(255, 215, 0, 0), #d32f2f, rgba(255, 215, 0, 0));
 }
 
-h2{
+h2 {
     font-size: 2rem;
     text-align: center;
-    text-transform: uppercase;    
+    text-transform: uppercase;
     /* background-color: #d32fc2; */
 }
 
@@ -64,64 +62,55 @@ h2{
 /*HEADER */
 
 
-header nav{
-    align-items: center;    
+header nav {
+    align-items: center;
     display: flex;
-    justify-content: space-between;          
+    justify-content: space-between;
 }
 
-#logo{    
+#logo {
     width: 5rem;
     height: 5rem;
-} 
-
-header nav h1{   
-    
-    font-size: 3rem;  
-    align-items: center;    
 }
 
-.nav-links ul{    
-    display: flex;       
-    justify-content: center;    
+header nav h1 {
+    font-size: 3rem;
+    align-items: center;
 }
 
-header nav ul li{
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
     margin: 0 1rem;
 }
 
-header nav ul li.active a{
+header nav ul li.active a {
     color: #ff6659;
     font-weight: 900;
 }
 
-header nav a{
-    text-transform: uppercase;      
-    font-size: 1rem;  
+header nav a {
+    text-transform: uppercase;
+    font-size: 1rem;
     font-weight: 500;
     display: inline;
 }
 
-header nav a::after{
+header nav a::after {
     content: "";
-    display: block;    
+    display: block;
     height: 0.1rem;
     width: 0%;
-    background: #d32f2f;    
+    background: #d32f2f;
     transition: width 0.5s ease-in-out;
 }
 
-header nav a:hover::after{
+header nav a:hover::after {
     width: 100%;
 }
-header nav .hamb{
-    display: none;
-    font-size: 3.5rem;
-    position: absolute;
-    top: 0.02rem;
-    margin-left: 50rem;
-    
-}
 
 
 
@@ -154,19 +143,6 @@ header nav .hamb{
 
 
 
-
-
-
-
-
-
-/*ACCUEIL*/
- 
-@media screen and (max-width: 960px){
-    #accueil{
-        display: none;
-    }
-}
 
 
 
@@ -176,26 +152,32 @@ header nav .hamb{
 /* Slideshow container */
 
 
-.slideshow-container img{
-  height: 30rem;
-  box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-  border-radius: 0.3rem;
+.slideshow-container img {
+    height: 30rem;
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 0.3rem;
 }
+
 /* Hide the images by default */
 .mySlides {
-  display: none;
+    display: none;
 }
 
 /* Fading animation */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-  height: 30rem;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    height: 30rem;
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 
@@ -309,86 +291,163 @@ header nav .hamb{
 /*DESTINATION */
 
 
+
+
+#destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 39.5rem;
+}
+
+
+
+
+
+
+
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     margin-bottom: 1rem;
     justify-content: space-around;
     background-color: transparent;
     width: 295px;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    border-radius: 1rem;
-    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
+    height: 200px;    
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+    border-radius: 0.3rem;
+    
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-    
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
+    /* Safari */
     backface-visibility: hidden;
+
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+    transform: rotateY(180deg);     
+ 
+}
+
+.fond{
+    background: rgba(255, 255, 255, 0.75);  
+    width: 295px;
+    height: 200px;
+    border-radius: 0.3rem;  
+}
     
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {    
-    background-color: #bbb;
-    color: black;
-    border-radius: 1rem;
-    overflow: hidden;    
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 1rem;
-  }
-  
-
-#destinations{    
-    display: flex;   
-    justify-content: space-around;      
+.fond h3{
+    font-size: 25px;    
+    padding-top: 5px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
 }
 
-@media screen and (max-width: 960px){
-    #destinations{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        right: -35%;
-    }
+.fond p{
+    font-size: 20px;
+    padding: 7px;
+    font-weight: bold;
 }
 
+.fond h3, .fond p{       
+    color: #850000;  
+    text-shadow: #ff6659 1px 0 10px;  
+}
 
+.egypt{
+    background-image: url(../img/dest/dest1.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem;     
+}
 
+.bora{
+    background-image: url(../img/dest/dest2.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem;     
+}
 
+.irelande{
+    background-image: url(../img/dest/dest3.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem;     
+}
 
+.japon{
+    background-image: url(../img/dest/dest4.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem;     
+}
 
+.canada{
+    background-image: url(../img/dest/dest5.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem;     
+}
 
+.norway{
+    background-image: url(../img/dest/dest6.jpg); 
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem;     
+}
 
+.france{
+    background-image: url(../img/dest/dest7.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem; 
+}
 
+.londres{
+    background-image: url(../img/dest/dest8.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem; 
+}
 
-
+.univers{
+    background-image: url(../img/dest/dest9.jpg);
+    background-position: center;
+    background-size: auto 100%;  
+    border-radius: 0.3rem; 
+}
 
 
 
@@ -434,50 +493,36 @@ header nav .hamb{
 /*ACTIVITY*/
 
 
-
-
-
-
-
-
-
-
-
-
+#activités{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+height: 48.35rem;
+}
 
 
 div.gallery {
     border-radius: 0.3rem;
-    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
-    margin: 0.3rem; 
+    box-shadow: 8px 8px 10px 0 rgba(0, 0, 0, 0.5);
+    margin: 0.3rem;
+    width: 300px;
+    height: 250px;
 }
-  
+
 div.gallery:hover {
-    box-shadow:4px 4px 5px 0 #d32f2f;   
+    box-shadow: 4px 4px 5px 0 #d32f2f;
 }
-  
+
 div.gallery img {
     border-top-left-radius: 0.3rem;
     border-top-right-radius: 0.3rem;
     width: 100%;
     height: 13rem;
 }
-  
+
 div.desc {
-    padding: 15px;
     text-align: center;
- }
-  
-
-
-  
-@media only screen and (max-width: 960px) {
-  .responsive {
-  position:relative;
-  right: -25%;
-  width: 50%;   
-  height: 18rem;}    
-} 
+}
 
 
 
@@ -510,28 +555,26 @@ div.desc {
 /*CONTACT*/
 
 
-#contact{      
-    background-color: #d32f2f15;   
-    height: 30rem;
-}
 
 
 
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
-  }
-  
-  label {
+}
+
+label {
     padding: 12px 12px 12px 0;
     display: inline-block;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -539,46 +582,50 @@ input[type=text], select, textarea {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-  }
-  
-  input[type=submit]:hover {
+}
+
+input[type=submit]:hover {
     background-color: #45a049;
-  }
-  
-  .container {
+}
+
+.container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-  }
-  
-  .col-25 {
+}
+
+.col-25 {
     float: left;
     width: 25%;
     margin-top: 6px;
-  }
-  
-  .col-75 {
+}
+
+.col-75 {
     float: left;
     width: 75%;
     margin-top: 6px;
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
+}
+
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
     clear: both;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
+}
+/*
+ Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other 
+
+@media screen and (max-width: 960px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
     }
-  }
+}
 
-
+*/
 
 
 
@@ -618,40 +665,6 @@ input[type=text], select, textarea {
 
 
 
-
-
-footer{    
-    
-    background-color: #d32f2f15;   
-    height: 10rem;
+footer {
+    text-align: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
