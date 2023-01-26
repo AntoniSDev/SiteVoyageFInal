@@ -58,8 +58,12 @@ h2 {
 
 
 
-
 /*HEADER */
+
+
+
+
+
 
 
 header nav {
@@ -69,7 +73,7 @@ header nav {
 }
 
 #logo {
-    width: 5rem;
+    width: 5em;
     height: 5rem;
 }
 
@@ -112,6 +116,29 @@ header nav a:hover::after {
     width: 100%;
 }
 
+.bar1 {
+    height: 0.2rem;
+    width: 40rem;
+    margin: 1rem auto 2rem;
+    background-image: -webkit-linear-gradient(left, rgba(255, 215, 0, 0), #d32f2f, rgba(255, 215, 0, 0));
+}
+
+
+
+
+/* Style the navbar */
+#navbar {
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 60rem;
+    background-color:
+}
 
 
 
@@ -137,16 +164,9 @@ header nav a:hover::after {
 
 
 
-
-
-
-
-
-
-
-
-
-
+#accueil{
+    padding-top: 3.5rem;
+}
 
 
 /* Slideshow container */
