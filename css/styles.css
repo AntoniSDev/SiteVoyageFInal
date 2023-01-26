@@ -1,7 +1,7 @@
 /* GENERAL */
 
 
-* {
+*{
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -97,10 +97,12 @@ header nav ul li.active a {
 }
 
 header nav a {
+    text-shadow: #ffffff 0px 2px 3px;  
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 500;
     display: inline;
+    font-weight: bold;
 }
 
 header nav a::after {
@@ -136,8 +138,8 @@ header nav a:hover::after {
 .sticky {
     position: fixed;
     top: 0;
-    width: 60rem;
-    background-color:
+    width: 59rem;
+    backdrop-filter: blur(20px);
 }
 
 
@@ -165,7 +167,7 @@ header nav a:hover::after {
 
 
 #accueil{
-    padding-top: 3.5rem;
+    padding-top: 48px;
 }
 
 
@@ -199,49 +201,6 @@ header nav a:hover::after {
         opacity: 1
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -683,4 +642,5 @@ textarea
 
 footer {
     text-align: center;
+    height: 30rem;
 }
