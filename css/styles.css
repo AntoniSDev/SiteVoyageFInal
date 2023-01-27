@@ -24,7 +24,7 @@
 .bar {
     height: 0.2rem;
     width: 40rem;
-    margin: 2rem auto;
+    margin: 3.5rem auto;
     background-image: -webkit-linear-gradient(left, rgba(255, 215, 0, 0), #d32f2f, rgba(255, 215, 0, 0));
 }
 
@@ -62,9 +62,11 @@ h2 {
 
 
 
-
-
-
+header{
+    position: absolute;
+    left: 0;
+    right: 0;  
+}
 
 header nav {
     align-items: center;
@@ -97,7 +99,7 @@ header nav ul li.active a {
 }
 
 header nav a {
-    text-shadow: #ffffff 0px 2px 3px;  
+    text-shadow: #ffffff 2px 1px 2px;  
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 500;
@@ -117,14 +119,6 @@ header nav a::after {
 header nav a:hover::after {
     width: 100%;
 }
-
-.bar1 {
-    height: 0.2rem;
-    width: 40rem;
-    margin: 1rem auto 2rem;
-    background-image: -webkit-linear-gradient(left, rgba(255, 215, 0, 0), #d32f2f, rgba(255, 215, 0, 0));
-}
-
 
 
 
